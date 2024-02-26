@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verify Your Account - Your One-Time Password (OTP)</title>
+  </head>
+  <body>
+    <div
+      style="
+        font-family: Helvetica, Arial, sans-serif;
+        min-width: 1000px;
+        overflow: auto;
+        line-height: 2;
+      "
+    >
+      <div style="margin: 50px auto; width: 70%; padding: 20px 0">
+        <div style="border-bottom: 1px solid #eee">
+          <a
+            href=""
+            style="
+              font-size: 1.4em;
+              color: #00466a;
+              text-decoration: none;
+              font-weight: 600;
+            "
+            >Verify Your Account</a
+          >
+        </div>
+        <p style="font-size: 1.1em">Hi there,</p>
+        <p>
+          Here's your One-Time Password (OTP) to complete your account
+          verification:
+        </p>
+        <div style="text-align: center; max-width: 550px">
+          <h2
+            style="
+              background: #00466a;
+              margin: 0 auto;
+              display: inline-block;
+              padding: 0 10px;
+              border-radius: 4px;
+              color: #fff;
+            "
+          >
+            {{otp}}
+          </h2>
+        </div>
+        <p>
+          Please enter this code within the next {{time_limit}} minutes to
+          complete your verification.
+        </p>
+        <p style="font-size: 0.9em">Best regards,<br />The Support Team</p>
+        <hr style="border: none; border-top: 1px solid #eee" />
+        <p>
+          NOTE: If you didn't request this OTP, you can safely ignore this
+          email.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
