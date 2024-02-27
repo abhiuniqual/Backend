@@ -126,7 +126,6 @@ app.post("/api/register", async (req, res) => {
  *       500:
  *         description: Internal server error
  */
-
 app.post("/api/login", async (req, res) => {
   const { email, password } = req.body;
 
@@ -161,6 +160,12 @@ app.post("/api/login", async (req, res) => {
  *     tags: [User]
  *     summary: Get all users
  *     description: Retrieve details of all users.
+ *     parameters:
+ *       - in: query
+ *         name: token
+ *         required: true
+ *         schema:
+ *           type: string
  *     responses:
  *       200:
  *         description: Returns all users
@@ -170,7 +175,7 @@ app.post("/api/login", async (req, res) => {
  *         description: Internal server error
  */
 app.get("/api/users", async (req, res) => {
-  const { token } = req.body;
+  const token = req.query.token;
 
   if (!token) {
     return res.status(401).json({ error: "Unauthorized" });
